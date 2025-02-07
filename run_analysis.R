@@ -1,6 +1,4 @@
-# Submission for Coursera Data Science Specialization  
-# Peer Graded Assignment: Getting and Cleaning Data Course Project
-# This script requires dplyr package
+ # Peer Graded Assignment: Getting and Cleaning Data Course Project
 
 # Read feature list and activity names
 features_list <- read.table("features.txt", col.names = c("no","features"))
@@ -39,6 +37,3 @@ tidy_mean_std$activity <- as.factor(tidy_set$activity)
 tidy_avg <- tidy_mean_std %>%
   group_by(subject, activity) %>%
   summarise_each(funs(mean))
-
-
-
